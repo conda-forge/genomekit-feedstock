@@ -34,7 +34,7 @@ requirements:
   run:
     - appdirs
     - crc32c
-    - google-cloud-storage
+    - google-cloud-storage >=2.10.0
     - {{ pin_compatible('numpy') }}
     - typing-extensions
     - importlib-metadata

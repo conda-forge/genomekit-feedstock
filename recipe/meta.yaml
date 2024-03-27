@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/deepgenomics/GenomeKit/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 8793fb15cba3f572879996d47d6320c8ec983995c6f713848f53ca5dae7e5844
+  sha256: 9264ae39316cc087a402e705ca0962e100f674a647ec15788ee25eb907cafe36
 
 build:
   number: 0

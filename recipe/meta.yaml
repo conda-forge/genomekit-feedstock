@@ -1,4 +1,4 @@
-{% set version = "4.2.1" %}
+{% set version = "4.3.0" %}
 
 package:
   name: genomekit
@@ -6,15 +6,12 @@ package:
 
 source:
   url: https://github.com/deepgenomics/GenomeKit/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 8793fb15cba3f572879996d47d6320c8ec983995c6f713848f53ca5dae7e5844
+  sha256: 9264ae39316cc087a402e705ca0962e100f674a647ec15788ee25eb907cafe36
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install --no-deps --ignore-installed .
-  # Py3.9 includes backwards-incompatible changes to the C extension API
-  # See https://docs.python.org/3/whatsnew/3.9.html#changes-in-the-c-api
-  # TODO Add support for more python versions
-  skip: true  # [py!=38]
+  skip: true  # [py>310 or py<38]
 
 requirements:
   build:
@@ -23,12 +20,12 @@ requirements:
   host:
     - appdirs
     - fmt
-    - numpy  # [not win]
+    - numpy  # [not win or py>38]
      # avoid build failure on Windows
-    - numpy >=1.18.0,<1.19.0  # [win]
+    - numpy >=1.18.0,<1.19.0  # [win and py==38]
     - typing-extensions
     - zlib
-    - python
+    - python {{ python }}
     - pip
 
   run:
@@ -39,7 +36,7 @@ requirements:
     - typing-extensions
     - importlib-metadata
     - tqdm
-    - python
+    - python {{ python }}
 
 test:
   imports:

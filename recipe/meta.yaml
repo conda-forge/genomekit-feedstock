@@ -20,9 +20,9 @@ requirements:
   host:
     - appdirs
     - fmt
-    - numpy  # [not win]
+    - numpy  # [not win or py>38]
      # avoid build failure on Windows
-    - numpy >=1.18.0,<1.19.0  # [win]
+    - numpy >=1.18.0,<1.19.0  # [win and py=38]
     - typing-extensions
     - zlib
     - python {{ python }}

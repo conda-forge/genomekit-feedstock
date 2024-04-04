@@ -9,13 +9,17 @@ source:
   sha256: 9264ae39316cc087a402e705ca0962e100f674a647ec15788ee25eb907cafe36
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install --no-deps --ignore-installed .
   skip: true  # [py>310 or py<38]
 
 requirements:
   build:
     - {{ compiler('cxx') }}
+    - python                                 # [build_platform != target_platform]
+    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+    - cython                                 # [build_platform != target_platform]
+    - numpy                                  # [build_platform != target_platform]
 
   host:
     - appdirs

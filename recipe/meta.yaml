@@ -1,4 +1,4 @@
-{% set version = "5.0.0" %}
+{% set version = "5.0.1" %}
 
 package:
   name: genomekit
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/deepgenomics/GenomeKit/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 98919884ec1cf8d0989c3395b46dbec8d64b8a3b3651bfaa7020192f0e677aee
+  sha256: 27f417d66e4a129ca0a87e12f2861d5336ff79fd72f48bd3dc6322d0d2d82004
 
 build:
   number: 0

@@ -9,7 +9,7 @@ source:
   sha256: 4544c5e29df28ee24ac92779273c3c5c954618b44c7e747b259e967aaa6d8c64
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install --no-deps --ignore-installed .
   skip: true  # [py>310 or py<38]
 
@@ -20,6 +20,7 @@ requirements:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
+    - setuptools                             # [build_platform != target_platform]
 
   host:
     - appdirs
@@ -31,6 +32,7 @@ requirements:
     - zlib
     - python {{ python }}
     - pip
+    - setuptools
 
   run:
     - appdirs

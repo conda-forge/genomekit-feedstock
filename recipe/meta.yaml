@@ -9,7 +9,7 @@ source:
   sha256: 4544c5e29df28ee24ac92779273c3c5c954618b44c7e747b259e967aaa6d8c64
 
 build:
-  number: 1
+  number: 2
   script: {{ PYTHON }} -m pip install --no-deps --ignore-installed .
   skip: true  # [py>310 or py<38]
 
@@ -37,7 +37,6 @@ requirements:
   run:
     - appdirs
     - google-cloud-storage >=2.10.0
-    - {{ pin_compatible('numpy') }}
     - typing-extensions
     - importlib-metadata
     - tqdm

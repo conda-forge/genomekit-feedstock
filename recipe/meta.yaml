@@ -9,7 +9,7 @@ source:
   sha256: e017b10f4df05a0215d39e981524bcb9518ae857f05339214d66ddf510ab0630
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install --no-deps --ignore-installed .
   skip: true  # [py>310 or py<38]
 
@@ -56,7 +56,7 @@ test:
     - python -m unittest discover
 
 about:
-  doc_url: https://genomekit.readthedocs.io/
+  doc_url: https://deepgenomics.github.io/GenomeKit/
   home: https://github.com/deepgenomics/GenomeKit
   license: "Apache-2.0"
   license_file: "LICENSE"

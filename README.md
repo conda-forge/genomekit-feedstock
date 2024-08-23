@@ -9,7 +9,7 @@ Package license: Apache-2.0
 
 Summary: GenomeKit is a Python library for fast and easy access to genomic resources such as sequence, data tracks, and annotations.
 
-Documentation: https://genomekit.readthedocs.io/
+Documentation: https://deepgenomics.github.io/GenomeKit/
 
 Current build status
 ====================

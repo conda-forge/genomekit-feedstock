@@ -9,9 +9,9 @@ source:
   sha256: d5851796bf1230b427f3ffcc1b72e9278118be5e3a822a0c4b139449b5111563
 
 build:
-  number: 2
+  number: 3
   script: {{ PYTHON }} -m pip install --no-deps --ignore-installed .
-  skip: true  # [py>310 or py<38]
+  skip: true  # [py>313 or py<39]
 
 requirements:
   build:
@@ -25,9 +25,8 @@ requirements:
   host:
     - appdirs
     - fmt
-    - numpy  # [not win or py>38]
-     # avoid build failure on Windows
-    - numpy >=1.18.0,<1.19.0  # [win and py==38]
+    - numpy >=1.22.0,<1.23.0  # [py>=39 and py<311]
+    - numpy >=1.26.0,<1.27.0  # [py>=311 and py<313]
     - typing-extensions
     - zlib
     - python {{ python }}

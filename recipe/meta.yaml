@@ -1,4 +1,4 @@
-{% set version = "6.0.3" %}
+{% set version = "6.1.0" %}
 
 package:
   name: genomekit
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://github.com/deepgenomics/GenomeKit/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 27941beb4486bd2bac2d1d202e83caca0bc43b7530cfd429edc3481626952419
+  sha256: 52388be3d9835d53ee06b30943ee96e34d90a1179f3c9122d7b231de54a69f45
 
 build:
   number: 0
   script: {{ PYTHON }} -m pip install --no-deps --ignore-installed .
-  skip: true  # [py>310 or py<38]
+  skip: true  # [py>312 or py<39]
 
 requirements:
   build:
@@ -19,15 +19,13 @@ requirements:
     - {{ stdlib("c") }}
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - numpy                                  # [build_platform != target_platform]
+    - numpy <2.0dev0                         # [build_platform != target_platform]
     - setuptools                             # [build_platform != target_platform]
 
   host:
     - appdirs
     - fmt
-    - numpy  # [not win or py>38]
-     # avoid build failure on Windows
-    - numpy >=1.18.0,<1.19.0  # [win and py==38]
+    - numpy <2.0dev0
     - typing-extensions
     - zlib
     - python {{ python }}

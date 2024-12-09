@@ -5,8 +5,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/deepgenomics/GenomeKit/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 27941beb4486bd2bac2d1d202e83caca0bc43b7530cfd429edc3481626952419
+  git_url: https://github.com/deepgenomics/GenomeKit.git
+  git_rev: chore/fmt11
 
 build:
   number: 1

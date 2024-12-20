@@ -9,7 +9,7 @@ source:
   sha256: 7111f268aa788a76ad5787b327e0fb737d67ee8e6851e4bea93ac6b89b2d3df0
 
 build:
-  number: 1
+  number: 2
   script: {{ PYTHON }} -m pip install --no-deps --ignore-installed .
   skip: true  # [py>312 or py<39]
 
@@ -35,6 +35,7 @@ requirements:
   run:
     - appdirs
     - google-cloud-storage >=2.10.0
+    - boto3
     - typing-extensions
     - importlib-metadata
     - tqdm

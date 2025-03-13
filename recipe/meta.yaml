@@ -24,7 +24,7 @@ requirements:
 
   host:
     - appdirs
-    - fmt<11.1 # see https://github.com/fmtlib/fmt/issues/4385
+    - fmt <11.1 # see https://github.com/fmtlib/fmt/issues/4385
     - numpy <2.0dev0
     - typing-extensions
     - zlib

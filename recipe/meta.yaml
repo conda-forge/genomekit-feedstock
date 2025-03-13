@@ -9,7 +9,7 @@ source:
   sha256: 0df5c5065d763f8417fbf73e8d226aa7a6e863f6be5617f3a6488931cfaaf677
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install --no-deps --ignore-installed .
   skip: true  # [py>312 or py<39]
 
@@ -24,7 +24,7 @@ requirements:
 
   host:
     - appdirs
-    - fmt
+    - fmt<11.1 # see https://github.com/fmtlib/fmt/issues/4385
     - numpy <2.0dev0
     - typing-extensions
     - zlib

@@ -214,14 +214,14 @@ Current release info
 Installing genomekit
 ====================
 
-Installing `genomekit` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `genomekit` from the `conda-forge/label/genomekit_dev` channel can be achieved by adding `conda-forge/label/genomekit_dev` to your channels with:
 
 ```
-conda config --add channels conda-forge
+conda config --add channels conda-forge/label/genomekit_dev
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `genomekit` can be installed with `conda`:
+Once the `conda-forge/label/genomekit_dev` channel has been enabled, `genomekit` can be installed with `conda`:
 
 ```
 conda install genomekit
@@ -236,26 +236,26 @@ mamba install genomekit
 It is possible to list all of the versions of `genomekit` available on your platform with `conda`:
 
 ```
-conda search genomekit --channel conda-forge
+conda search genomekit --channel conda-forge/label/genomekit_dev
 ```
 
 or with `mamba`:
 
 ```
-mamba search genomekit --channel conda-forge
+mamba search genomekit --channel conda-forge/label/genomekit_dev
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search genomekit --channel conda-forge
+mamba repoquery search genomekit --channel conda-forge/label/genomekit_dev
 
 # List packages depending on `genomekit`:
-mamba repoquery whoneeds genomekit --channel conda-forge
+mamba repoquery whoneeds genomekit --channel conda-forge/label/genomekit_dev
 
 # List dependencies of `genomekit`:
-mamba repoquery depends genomekit --channel conda-forge
+mamba repoquery depends genomekit --channel conda-forge/label/genomekit_dev
 ```
 
 

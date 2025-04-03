@@ -1,4 +1,4 @@
-{% set version = "6.5.1" %}
+{% set version = "6.5.1-dev-test" %}
 
 package:
   name: genomekit
@@ -34,7 +34,7 @@ requirements:
 
   run:
     - appdirs
-    - google-cloud-storage >=2.10.0
+    - google-cloud-storage
     - boto3
     - typing-extensions
     - importlib-metadata

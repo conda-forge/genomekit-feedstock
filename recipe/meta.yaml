@@ -1,4 +1,4 @@
-{% set version = "6.5.1-dev-test" %}
+{% set version = "6.5.1" %}
 
 package:
   name: genomekit

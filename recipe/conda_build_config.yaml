@@ -1,2 +1,4 @@
 channel_targets:
 - conda-forge genomekit_dev
+cxx_compiler:
+- vs2020 # [win]

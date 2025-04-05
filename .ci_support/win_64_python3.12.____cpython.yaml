@@ -5,7 +5,7 @@ channel_sources:
 channel_targets:
 - conda-forge genomekit_dev
 cxx_compiler:
-- vs2020
+- vs2022
 pin_run_as_build:
   python:
     min_pin: x.x

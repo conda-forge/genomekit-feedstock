@@ -24,7 +24,6 @@ requirements:
 
   host:
     - appdirs
-    - fmt
     - numpy <2.0dev0
     - typing-extensions
     - zlib

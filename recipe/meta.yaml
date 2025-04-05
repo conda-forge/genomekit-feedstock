@@ -1,4 +1,4 @@
-{% set version = "6.5.1dev1" %}
+{% set version = "6.5.2msvc" %}
 
 package:
   name: genomekit
@@ -24,7 +24,6 @@ requirements:
 
   host:
     - appdirs
-    - fmt
     - numpy <2.0dev0
     - typing-extensions
     - zlib

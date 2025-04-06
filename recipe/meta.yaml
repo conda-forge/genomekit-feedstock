@@ -1,4 +1,4 @@
-{% set version = "6.5.2" %}
+{% set version = "6.5.3" %}
 
 package:
   name: genomekit
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/deepgenomics/GenomeKit/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: eeb9671a7f6d6309a8a941dc4ff27a8341515a34bad9402a114e32249219ccbc
+  sha256: 79ec1b8e913601207a04a45004e8d44d3e22e031af4b43967786e11764bc1f59
 
 build:
   number: 0
@@ -33,7 +33,7 @@ requirements:
 
   run:
     - appdirs
-    - google-cloud-storage >=2.10.0
+    - google-cloud-storage
     - boto3
     - typing-extensions
     - importlib-metadata

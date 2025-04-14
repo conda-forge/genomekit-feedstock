@@ -9,7 +9,7 @@ source:
   sha256: 79ec1b8e913601207a04a45004e8d44d3e22e031af4b43967786e11764bc1f59
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install --no-deps --ignore-installed .
   skip: true  # [py>312 or py<39]
 
@@ -19,12 +19,12 @@ requirements:
     - {{ stdlib("c") }}
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - numpy <2.0dev0                         # [build_platform != target_platform]
+    - numpy                                  # [build_platform != target_platform]
     - setuptools                             # [build_platform != target_platform]
 
   host:
     - appdirs
-    - numpy <2.0dev0
+    - numpy
     - typing-extensions
     - zlib
     - python {{ python }}

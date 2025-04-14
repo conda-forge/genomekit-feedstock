@@ -46,6 +46,7 @@ test:
   requires:
     - pytest-cov
     - pip
+    - numpy <2.0dev0
   source_files:
     - tests
   commands:

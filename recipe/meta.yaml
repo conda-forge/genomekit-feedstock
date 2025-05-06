@@ -1,4 +1,4 @@
-{% set version = "6.5.3" %}
+{% set version = "7.0.0" %}
 
 package:
   name: genomekit
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://github.com/deepgenomics/GenomeKit/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 79ec1b8e913601207a04a45004e8d44d3e22e031af4b43967786e11764bc1f59
+  sha256: fbbaea868fb389343e3a4faf2b36bd927bd633e62b0aa49a5f29d5587a1da1fa
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install --no-deps --ignore-installed .
   skip: true  # [py>312 or py<39]
 

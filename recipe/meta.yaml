@@ -1,4 +1,4 @@
-{% set version = "v7.1.0setuptools" %}
+{% set version = "7.1.0setuptools" %}
 
 package:
   name: genomekit

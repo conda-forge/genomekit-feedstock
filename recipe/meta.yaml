@@ -1,4 +1,4 @@
-{% set version = "v7.1.0-py13-experimental" %}
+{% set version = "v7.1.0py13experimental" %}
 
 package:
   name: genomekit

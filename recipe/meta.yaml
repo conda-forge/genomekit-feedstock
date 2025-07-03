@@ -1,4 +1,4 @@
-{% set version = "v7.1.0py13experimental" %}
+{% set version = "v7.1.0setuptools" %}
 
 package:
   name: genomekit
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://github.com/deepgenomics/GenomeKit/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: f18f6b8b0fe48b6e3e06be0a5b243d6c2d6f1f746c8fd1f5c76c27b467105c8c
+  sha256: c61d66d9111112abf28deaaf97c6df9a6ceb4ebff41b4d1670885377f10039e6
 
 build:
   number: 0
   script: {{ PYTHON }} -m pip install --no-deps --ignore-installed .
-  skip: true  # [py>313 or py<313]
+  skip: true  # [py>312 or py<39]
 
 requirements:
   build:

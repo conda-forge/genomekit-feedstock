@@ -5,8 +5,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/deepgenomics/GenomeKit/archive/refs/tags/testsetuptools2.tar.gz
-  sha256: a1a567de38bf5a094166f6d16b94b355dd8df29826bd40e199cf99f30e22d3b3
+  url: https://github.com/deepgenomics/GenomeKit/archive/refs/tags/testsetuptools3.tar.gz
+  sha256: 8149432c3a02f2210dbe0df14b96208e271d9c4e631c5bbd22859c75cd7523b7
 
 build:
   number: 0
